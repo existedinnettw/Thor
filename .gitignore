@@ -1,3 +1,5 @@
 *.fcstd1
 *~
 *.FCBak
+
+.venv/
