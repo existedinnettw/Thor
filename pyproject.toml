@@ -2,7 +2,10 @@
 name = "thor"
 version = "0.1.0"
 requires-python = ">=3.14"
-dependencies = []
+dependencies = [
+    "freecad-fasteners>=0.5.67",
+    "freecad-gears",
+]
 
 [dependency-groups]
 dev = [
@@ -11,3 +14,9 @@ dev = [
 
 [tool.uv.sources]
 fcppm = { path = "../fcppm", editable = true }
+freecad-gears = { path = "../fcppm_recipes/recipes/freecad-gears" }
+
+# freecad-gears is not on the index yet: built from the local recipe with the venv's (editable,
+# unreleased) fcppm, which has `python-modules`
+[tool.uv]
+no-build-isolation-package = ["freecad-gears"]
