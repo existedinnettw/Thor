@@ -3,22 +3,12 @@ name = "thor"
 version = "0.1.0"
 requires-python = ">=3.14"
 dependencies = [
-    "freecad-fasteners>=0.5.67",
-    "freecad-gears",
-    "freecad-asm4",
+    "freecad-asm4>=0.61.1",      # Assembly4: every assembly
+    "freecad-fasteners>=0.5.67", # Fasteners: screws and nuts in the assemblies
+    "freecad-gears>=1.4.0",      # Gears: the gear parts
 ]
 
 [dependency-groups]
 dev = [
-    "fcppm",
+    "fcppm>=0.2.3",
 ]
-
-[tool.uv.sources]
-fcppm = { path = "../fcppm", editable = true }
-freecad-gears = { path = "../fcppm_recipes/recipes/freecad-gears" }
-freecad-asm4 = { path = "../fcppm_recipes/recipes/freecad-asm4" }
-
-# freecad-gears and freecad-asm4 are not on the index yet: built from the local recipe with the venv's (editable,
-# unreleased) fcppm, which has `python-modules`
-[tool.uv]
-no-build-isolation-package = ["freecad-gears", "freecad-asm4"]
