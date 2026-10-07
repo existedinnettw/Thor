@@ -33,7 +33,7 @@ wheels = [
 
 [[package]]
 name = "freecad-gears"
-version = "1.4.0"
+version = "1.4.0.post1"
 source = { directory = "../fcppm_recipes/recipes/freecad-gears" }
 
 [[package]]
