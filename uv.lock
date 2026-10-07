@@ -18,6 +18,11 @@ dev = [
 ]
 
 [[package]]
+name = "freecad-asm4"
+version = "0.61.1"
+source = { directory = "../fcppm_recipes/recipes/freecad-asm4" }
+
+[[package]]
 name = "freecad-fasteners"
 version = "0.5.67"
 source = { registry = "https://gitea.insleker.org/api/packages/inkr_org/pypi/simple/" }
@@ -36,6 +41,7 @@ name = "thor"
 version = "0.1.0"
 source = { virtual = "." }
 dependencies = [
+    { name = "freecad-asm4" },
     { name = "freecad-fasteners" },
     { name = "freecad-gears" },
 ]
@@ -47,6 +53,7 @@ dev = [
 
 [package.metadata]
 requires-dist = [
+    { name = "freecad-asm4", directory = "../fcppm_recipes/recipes/freecad-asm4" },
     { name = "freecad-fasteners", specifier = ">=0.5.67" },
     { name = "freecad-gears", directory = "../fcppm_recipes/recipes/freecad-gears" },
 ]

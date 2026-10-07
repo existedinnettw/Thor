@@ -5,6 +5,7 @@ requires-python = ">=3.14"
 dependencies = [
     "freecad-fasteners>=0.5.67",
     "freecad-gears",
+    "freecad-asm4",
 ]
 
 [dependency-groups]
@@ -15,8 +16,9 @@ dev = [
 [tool.uv.sources]
 fcppm = { path = "../fcppm", editable = true }
 freecad-gears = { path = "../fcppm_recipes/recipes/freecad-gears" }
+freecad-asm4 = { path = "../fcppm_recipes/recipes/freecad-asm4" }
 
-# freecad-gears is not on the index yet: built from the local recipe with the venv's (editable,
+# freecad-gears and freecad-asm4 are not on the index yet: built from the local recipe with the venv's (editable,
 # unreleased) fcppm, which has `python-modules`
 [tool.uv]
-no-build-isolation-package = ["freecad-gears"]
+no-build-isolation-package = ["freecad-gears", "freecad-asm4"]
